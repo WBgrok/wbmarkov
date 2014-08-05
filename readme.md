@@ -22,12 +22,10 @@ Installation
 You will need PostgreSQL installed and running, as well as a way to get python to talk to Postgres.
 
 Create a DB and load the schema.
-	- You can do this by hand, loading schema.sql in an empty DB
-	- alternatively there's an install.sh that will do this for you, eg:
-
-		specifying the DB name:``./install.sh -d mymarkov``
-
-		the script can also take in hostname, port and username: ``./install.sh -h mydbserver -p 1243 -u user -d mymarkov``
+- You can do this by hand, loading schema.sql in an empty DB
+- alternatively there's an install.sh that will do this for you, eg:
+-- specifying the DB name:``./install.sh -d mymarkov``
+-- the script can also take in hostname, port and username: ``./install.sh -h mydbserver -p 1243 -u user -d mymarkov``
 
 Usage
 =====
@@ -35,21 +33,21 @@ Usage
 See example.py for example uses. Typically, you would:
 
 1) Populate the model
-	- import wbmarkov
-	- connect to the model DB
-	- create a parser object, passing a dbapi2 connection object
-	- get the parser to parse individual strings (eg. if hooking this to a chatbot)
-	- get the parser to parse and load a text file
+- import wbmarkov
+- connect to the model DB
+- create a parser object, passing a dbapi2 connection object
+- get the parser to parse individual strings (eg. if hooking this to a chatbot)
+- get the parser to parse and load a text file
 
 2) Generate some stuff
-	- import wbmarkov
-	- connect to the model DB
-	- create a generator object, passing a dbapi2 connection object
-	- generate some strings (and pipe them out to your IRC or twitterbot, etc...)
+- import wbmarkov
+- connect to the model DB
+- create a generator object, passing a dbapi2 connection object
+- generate some strings (and pipe them out to your IRC or twitterbot, etc...)
 
 3) Use it for other purposes
-	The engine does not support this (it's mainly geared towards generating gobbledygook),
-	but a populated model will give you word, digram and trigram stats for whatever you fed it.
-	You can then use this to work out statistical properties of the sample text, check its accuracy
-	working out its (delightfully named) perplexity (http://en.wikipedia.org/wiki/Perplexity) or use
-	it to check how close a given text matches the model (eg. to identify an author).
+The engine does not support this (it's mainly geared towards generating gobbledygook),
+but a populated model will give you word, digram and trigram stats for whatever you fed it.
+You can then use this to work out statistical properties of the sample text, check its accuracy
+working out its (delightfully named) perplexity (http://en.wikipedia.org/wiki/Perplexity) or use
+it to check how close a given text matches the model (eg. to identify an author).
