@@ -118,5 +118,5 @@ fi
 
 rm /tmp/wbmarkov.sql
 
-echo "Databse created - use 'psql -h $hostname -p $port -U $username $db_name' to connect"
+echo "Database created - use 'psql -h $hostname -p $port -U $username $db_name' to connect"
 
