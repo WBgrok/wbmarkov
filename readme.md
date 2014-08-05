@@ -24,7 +24,9 @@ You will need PostgreSQL installed and running, as well as a way to get python t
 Create a DB and load the schema.
 	- You can do this by hand, loading schema.sql in an empty DB
 	- alternatively there's an install.sh that will do this for you, eg:
+
 		``./install.sh -d mymarkov``
+
 		``./install.sh -h mydbserver -p 1243 -u user -d mymarkov``
 
 Usage
