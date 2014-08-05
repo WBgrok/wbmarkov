@@ -1,7 +1,7 @@
 =============================
  Markov Language Model
 =============================
-:Author: Will Berard <william.berard@gmail.com>
+Author: Will Berard (https://github.com/WBgrok/)
 
 A statistical language model engine based on Markov trigrams.
 Inspired by the excellent Natural Language Processing Coursera module
@@ -25,7 +25,7 @@ Create a DB and load the schema.
 	- You can do this by hand, loading schema.sql in an empty DB
 	- alternatively there's an install.sh that will do this for you, eg:
 		``./install.sh -d mymarkov``
-		``./install.sh -h mydbserver -p 1243 -u user -d mymarkov''
+		``./install.sh -h mydbserver -p 1243 -u user -d mymarkov``
 
 Usage
 =====
@@ -36,7 +36,7 @@ See example.py for example uses. Typically, you would:
 	- import wbmarkov
 	- connect to the model DB
 	- create a parser object, passing a dbapi2 connection object
-	- get the parser to parse individual strings (eg if hooking this to a chatbot)
+	- get the parser to parse individual strings (eg. if hooking this to a chatbot)
 	- get the parser to parse and load a text file
 
 2) Generate some stuff
@@ -50,4 +50,4 @@ See example.py for example uses. Typically, you would:
 	but a populated model will give you word, digram and trigram stats for whatever you fed it.
 	You can then use this to work out statistical properties of the sample text, check its accuracy
 	working out its (delightfully named) perplexity (http://en.wikipedia.org/wiki/Perplexity) or use
-	it to check how close a given text matches the model (eg to identify an author).
+	it to check how close a given text matches the model (eg. to identify an author).
